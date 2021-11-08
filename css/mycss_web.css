@@ -43,14 +43,14 @@ label{
   text-align: center;
 }
 
-button[type=submit]{
+button[name="quiz_name"]{
   background-color: #ff00c1;
   color: #fff;
   border-radius: 5px;
   cursor:pointer;
 }
 
-button[type=submit]:hover{
+button[name="quiz_name"]:hover{
   background-color: #ff7fe0;
 }
 
@@ -74,31 +74,3 @@ li a.a:hover {
   background-color: #111;
 }
 
-.aboutme_table>table{
-  border: 2px solid white;
-  border-collapse:collapse;
-  width: 40%;
-}
-
-.aboutme_table>table th, .aboutme_table tr{
-  border: 4px solid white;
-  padding: 4px;
-  text-align: center;
-  background-color: none;
-  color: #01cdfe;
-}
-
-.aboutme_table>table td{
-  background-color: #fffb96;
-}
-
-.aboutme_table>table td:hover{
-  background-color: #05ffa1;
-  color: #b967ff;
-}
-
-@media print {
-  .screen_only{
-    display: none;
-  }
-}
