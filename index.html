@@ -16,7 +16,7 @@
     <script src="quiz.js"> </script>
 
   </head>
-  <body id = "body_style">
+  <body id="body_style">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
       <div class="container">
       <a class="navbar-brand" href="https://rbakar18.github.io/Assignment-03/">Quiz App</a>
@@ -44,10 +44,12 @@
               <input type="text" id="userName" name = "fname" placeholder="Enter your first name:">
               <div> Please choose a quiz: </div>
               <button class="btn btnsz btn1 btn-danger float-right" data-action="{{this.action}}">{{this.action}}</button>
+
               <input type="radio" id="quiz_one" name="quiz_name" value="quiz_one"required>
-                  <label for="quiz_one">Quiz 1</label>
+                   <label for="quiz_one">Quiz 1</label>
               <input type="radio" id="quiz_one" name="quiz_name" value="quiz_one"required>
                   <label for="quiz_one">Quiz 2</label>
+
               </div>
             </div>
           </div>
@@ -111,8 +113,8 @@
       <div class="row">
           <div class="col">
             <div>
-              <span style="text-align:center"> {{this.answerText}} </span>
-              <input type="text" id="{{this.answerFieldId}}" name="answer"><br><br>
+              <span style="text-align:center"> {{this.questionText}} </span>
+              <input type="text" id="{{this.answerText}}" name="answer"><br><br>
               <button class="btn btn-danger float-right" data-action="submit">Submit</button>
             </div>
           </div>
@@ -156,7 +158,6 @@
           <div class="col">
             <div>
               <h1 id="end_message"></h1>
-              <button class="btn btn-danger float-right" data-action="start_again" onclick="">Start Again</button>
             </div>
           </div>
         </div>
@@ -176,3 +177,4 @@
       </div>
   </script-->
 </html>
+
