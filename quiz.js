@@ -14,7 +14,7 @@ const appState = {
 }
 
 async function get_Data(quizSelection, question_type){
-  var api_url = 'https://my-json-server.typicode.com/rbakar18/QuizQuestions'
+  var api_url = 'https://my-json-server.typicode.com/rbakar18/quiz-questions'
   var endpoint = `${api_url}/${quizSelection}/${question_type}`
 
   const data = await fetch(endpoint)
