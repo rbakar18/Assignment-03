@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   appState.current_model = {
     action : "start_quiz",
     action1 : "start_quiz",
+
   }
   update_view(appState);
 
@@ -211,7 +212,7 @@ function handle_widget_event(e) {
           //appState.current_model = questions[appState.current_question];
           setFeedbackView(isCorrect);
           update_view(appState);
-          var current_question_data = get_Data(appState.quiz_Name, appState.current_question)
+          var current_question_data = get_Data(appState.quiz_name, appState.current_question)
 
       }
    }
@@ -340,6 +341,7 @@ else if (appState.current_model.questionType == "text_input"){
     } else {
       appState.current_view = "#answer_incorrect_feedback_view";
     }
+    return false;
   }
 
 function update_view(appState) {
@@ -362,3 +364,4 @@ const render_widget = (model, view) => {
 
   return html_widget_element
 }
+
