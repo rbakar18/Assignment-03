@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set the state
   appState.current_view = "#intro_view";
   appState.current_model = {
-    action : "quiz",
+    action : "start_quiz",
+    action1 : "start_quiz",
   }
   update_view(appState);
 
@@ -126,7 +127,7 @@ function handle_widget_event(e) {
     if (userName == "") {
       userName = "User";
     }
-    if (e.target.dataset.action == "quiz") {
+    if (e.target.dataset.action == "start_quiz") {
       timer = setInterval(setTime, 1000);
       minutesLabel = document.getElementById("minutes");
       secondsLabel = document.getElementById("seconds");
