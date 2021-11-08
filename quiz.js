@@ -193,7 +193,7 @@ function handle_widget_event(e) {
   if (appState.current_view == "#question_view_text_input") {
       if (e.target.dataset.action == "submit") {
 
-          user_response = document.querySelector(`#${appState.current_model.answerFieldId}`).value;
+          user_response = document.querySelector(`#${appState.current_model.answerText}`).value;
           isCorrect = check_user_response(e.target.dataset.answer, appState.current_model);
           isCorrect = check_user_response(user_response, appState.current_model);
 
@@ -240,15 +240,15 @@ function handle_widget_event(e) {
 
     let finalScore = +(((appState.answers_right / (appState.answers_wrong + appState.answers_right)) * 100).toFixed(2));
     if (finalScore >= 65) {
-      document.getElementById("end_message").innerHTML = "Final Score: " + finalScore + "% Rejoice " + userName + ", you passed!" + "<br>To Restart Quiz Refresh Page";
+      document.getElementById("end_message").innerHTML = "Final Score: " + finalScore + "%<br>Rejoice " + userName + ", you passed!" + "<br>To Restart Quiz click on Quiz App";
     }
     else {
-      document.getElementById("end_message").innerHTML = "Final Score: " + finalScore + "%,Alas " + userName + " failur." + "but it is not over. <br>To Restart Quiz Refresh Page " ;
+      document.getElementById("end_message").innerHTML = "Final Score: " + finalScore + "%<br>Alas " + userName + ", failure." + " But it is not over. <br>To Restart Quiz click on Quiz App";
     }
     if (e.target.dataset.action == "{{this.action}}") {
       appState.current_view = "#intro_view";
       appState.current_question = -1,
-        appState.quiz_Name = "",
+        appState.quiz_name = "",
         appState.current_model = {},
         appState.answers_right = 0,
         appState.answers_wrong = 0
